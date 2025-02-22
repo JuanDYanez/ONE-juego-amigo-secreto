@@ -132,6 +132,7 @@ ul {
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    display: flex;
 }
 
 .result-list {
@@ -159,4 +160,38 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+li {
+    background-color: #d8d8d8;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+li:hover {
+    background-color:#b8b8b8 ;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: var(--color-text);
+    padding: 5px;
+    margin-left: 10px;
+    border-radius:50%;
+    width: 20px;
+}
+
+.delete-btn:hover {
+    color: #2b2b2b;
+    font-weight: 600;
+}
+
+.name-list {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
