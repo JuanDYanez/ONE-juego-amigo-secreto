@@ -31,8 +31,6 @@ function agregarAmigo() {
   nuevoAmigo = nuevoAmigo.charAt(0).toUpperCase() + nuevoAmigo.slice(1).toLowerCase();
   
   listaAmigos.push(nuevoAmigo);
-
-  console.log(listaAmigos);
   
   if (listaAmigos.length >= 1) {
     habilitarBoton('botonSorteo');
@@ -46,6 +44,11 @@ function agregarAmigo() {
 }
 
 function eliminarAmigo(index) {
+  if (listaAmigos.length === 1) {
+    deshabilitarBoton('botonSorteo')
+    document.getElementById('botonSorteo').classList.replace('button-draw', 'button-draw-disabled')
+  }
+
   listaAmigos.splice(index, 1);
   renderizarListaAmigos();
 }
