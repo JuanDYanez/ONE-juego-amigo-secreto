@@ -85,6 +85,7 @@ body {
     border: 2px solid #000;
     border-radius: 25px 0 0 25px;
     font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .button-container {
@@ -119,9 +120,21 @@ button {
     background-color: var(--color-tertiary);
     color: var(--color-text);
     border-radius: 0 25px 25px 0;
+    margin-left: -2px;
 }
 
 .button-add:hover {
+    background-color: #a1a1a1;
+}
+
+.button-clean {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 25px;
+    margin-left: 10px;
+}
+
+.button-clean:hover {
     background-color: #a1a1a1;
 }
 
@@ -136,17 +149,31 @@ ul {
 }
 
 .result-list {
+    display: flex;
+    align-items: center;
     margin-top: 15px;
-    color: #05DF05;
+    color: var(--color-button);
     font-size: 22px;
     font-weight: bold;
     text-align: center;
+    background-color: transparent;
+}
+
+.friend-result-list {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-button);
+    padding: 5px 10px;
+    margin-left: 8px;
+    border-radius: 10px;
+    color: var(--color-white);
 }
 
 /* Botón de sortear título */
 .button-draw {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     width: 100%;
     padding: 10px 40px;
     color: var(--color-white);
@@ -154,7 +181,22 @@ ul {
     font-size: 16px;
 }
 
+.button-draw-disabled {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: #686868;
+    font-size: 16px;
+}
+
 .button-draw img {
+    margin-right: 40px;
+}
+
+.button-draw-disabled img {
     margin-right: 40px;
 }
 
@@ -167,6 +209,7 @@ li {
     padding: 10px 15px;
     border-radius: 10px;
     margin: 5px;
+    text-transform: capitalize;
 }
 
 li:hover {
